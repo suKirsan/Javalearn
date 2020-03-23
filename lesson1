@@ -1,0 +1,63 @@
+import static java.lang.System.*;
+
+public class MyClass {
+  public static void main(String[] args) {
+    first();
+    out.println("a * (b + (c / d)) = " + Second(1,2,3,4));
+    out.println(Third(10,20));
+    out.println(Fourth(-8));
+    out.println(Fifth(-9));
+    Sixth("Николай");
+    seventh(2020);
+  }
+  static void first(){
+    out.println("Первое задание:");
+    byte a = -7;
+    short b = 10000;
+    char c = 'A';
+    int d = 56999999;
+    long e = 100000000000L;
+    float f = 3.2F;
+    double g = 15.7;
+    boolean h = false;
+    out.println(a);
+    out.println(b);
+    out.println(c);
+    out.println(d);
+    out.println(e);
+    out.println(f);
+    out.println(g);
+    out.println(h);
+  }
+  static double Second(double a, double b, double c, double d) {
+    out.println("Второе задание:");
+    return a*(b+(c/d));
+  }
+  static boolean Third(int a, int b) {
+    out.println("Третье задание:");
+    int sum = a + b;
+
+    if (sum >= 10 && sum <= 20) return true;
+    else return false;
+  }
+  static String Fourth(int a) {
+    out.println("Задание четыре:");
+    if (a >=0) return "Это число положительное";
+    else return "Это число отрицательное";
+  }
+  static boolean Fifth(int a){
+    out.println("Задание 5:");
+    if (a<0) return true;
+    else return false;
+  }
+  static void Sixth(String a){
+    out.println("Задание шесть:");
+    out.println("Привет,"+a +"!");
+  }
+  static void seventh(int year) {
+    System.out.println("Седьмое задание:");
+    if (!(year % 4 == 0) || ((year % 100 == 0) && !(year % 400 == 0)))
+        System.out.println(year + " - не высокосный год");
+    else System.out.println(year + " - высокосный год");
+  }
+};
